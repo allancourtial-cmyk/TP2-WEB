@@ -1,0 +1,44 @@
+/* --- MISE EN FORME GLOBALE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+/* Style principal du tableau */
+table {
+    border-collapse: collapse; /* Colle les bordures entre elles */
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Bordures blanches pour créer l'effet d'espacement vu sur l'image */
+th, td {
+    border: 3px solid white;
+    padding: 12px 8px;
+}
+
+/* --- Couleurs des En-têtes (Ligne 1) --- */
+th.head-vacances { background-color: #808080; color: white; }
+th.head-zone-a   { background-color: #e67e22; color: white; }
+th.head-zone-b   { background-color: #3498db; color: white; }
+th.head-zone-c   { background-color: #8cbd18; color: white; }
+
+/* --- Couleurs de la Colonne 1 (Périodes) --- */
+.col-vacances {
+    background-color: #e0e0e0; /* Gris clair */
+    font-weight: bold;
+    text-align: left; /* Aligné à gauche comme sur l'image */
+}
+
+/* --- Couleurs de fond des zones --- */
+.cell-zone-a { background-color: #fdebd0; } /* Orange très clair */
+.cell-zone-b { background-color: #ebf5fb; } /* Bleu très clair */
+.cell-zone-c { background-color: #f0f7e6; } /* Vert très clair */
+
+/* --- Cellules fusionnées (Lignes blanches) --- */
+.cell-merged {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0; /* Petite ligne grise fine de séparation */
+}
