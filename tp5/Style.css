@@ -110,3 +110,49 @@ code {
 .table-langages a:hover {
     text-decoration: underline;
 }
+
+/* =========================================
+   STYLE SPECIFIQUE POUR L'EXERCICE 3 
+   ========================================= */
+
+.table-calendrier {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 450px; /* Un calendrier doit rester compact */
+    margin: 20px auto;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #b2babb; /* Bordure extérieure un peu plus foncée */
+}
+
+/* Bordures intérieures des cellules */
+.table-calendrier th, .table-calendrier td {
+    border: 1px solid #b2babb;
+    padding: 8px;
+    background-color: white; /* Fond blanc par défaut */
+}
+
+/* Style du titre "Avril 2024" */
+.table-calendrier .titre-mois {
+    background-color: #f8f9f9; /* Gris très clair, presque blanc */
+    color: #333;
+    font-weight: normal; 
+    padding: 10px;
+}
+
+/* Ligne des jours de la semaine (Lu, Ma, Me...) */
+.table-calendrier .jours-semaine th {
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #ffffff;
+}
+
+/* Couleur des colonnes du Week-end (Samedi et Dimanche) */
+.table-calendrier .col-weekend {
+    background-color: #d5f5e3; /* Vert pâle identique à la capture */
+}
+
+/* Couleur des cases vides à la fin du mois */
+.table-calendrier .case-vide {
+    background-color: #eaeded; /* Gris doux pour "éteindre" la case */
+}
