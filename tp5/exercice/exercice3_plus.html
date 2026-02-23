@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus - Calendrier Dynamique</title>
+    <link rel="stylesheet" href="../Style.css">
+    
+    <style>
+        /* Un peu de style juste pour les boutons de navigation */
+        .navigation-mois {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 450px;
+            margin: 0 auto 10px auto;
+        }
+        .btn-nav {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-nav:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: #2c3e50;">Calendrier Interactif Infini</h1>
+
+    <div class="navigation-mois">
+        <button class="btn-nav" id="btn-prec">⬅️ Précédent</button>
+        <button class="btn-nav" id="btn-suiv">Suivant ➡️</button>
+    </div>
+
+    <table class="table-calendrier">
+        <thead>
+            <tr>
+                <th colspan="7" class="titre-mois" id="titre-mois">Chargement...</th>
+            </tr>
+            <tr class="jours-semaine">
+                <th>Lu</th><th>Ma</th><th>Me</th><th>Je</th><th>Ve</th>
+                <th class="col-weekend">Sa</th><th class="col-weekend">Di</th>
+            </tr>
+        </thead>
+        <tbody id="corps-calendrier">
+        </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="../index.html" class="bouton-lien" style="background-color: #e74c3c; padding: 10px 20px; color: white; text-decoration: none; border-radius: 5px;">⬅️ Retour au Menu</a>
+    </div>
+
+    <script>
+        const moisNoms = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+        
+        // On démarre avec la date d'aujourd'hui
+        let dateActuelle = new Date();
+        let moisActuel = dateActuelle.getMonth();
+        let anneeActuelle = dateActuelle.getFullYear();
+
+        // La fonction magique qui dessine le tableau
+        function genererCalendrier(mois, annee) {
+            // 1. On met à jour le titre (ex: Février 2026)
+            document.getElementById("titre-mois").innerText = moisNoms[mois] + " " + annee;
+            
+            // 2. On vide le tableau précédent
+            const tbody = document.getElementById("corps-calendrier");
+            tbody.innerHTML = "";
+
+            // 3. Calculs mathématiques
+            let premierJourMois = new Date(annee, mois, 1).getDay();
+            // JS dit que Dimanche=0. On corrige pour que Lundi=0 et Dimanche=6
+            premierJourMois = premierJourMois === 0 ? 6 : premierJourMois - 1;
+            let joursDansMois = new Date(annee, mois + 1, 0).getDate();
+
+            let tr = document.createElement("tr");
+            let jourSemaine = 0;
+
+            // 4. On crée les cases vides au début du mois
+            for (let i = 0; i < premierJourMois; i++) {
+                let td = document.createElement("td");
+                td.className = "case-vide";
+                tr.appendChild(td);
+                jourSemaine++;
+            }
+
+            // 5. On remplit avec les vrais jours
+            for (let jour = 1; jour <= joursDansMois; jour++) {
+                let td = document.createElement("td");
+                td.innerText = jour;
+                
+                // On remet la couleur verte pour le week-end
+                if (jourSemaine === 5 || jourSemaine === 6) {
+                    td.className = "col-weekend";
+                }
+                
+                tr.appendChild(td);
+                jourSemaine++;
+
+                // Si on arrive à dimanche (7 jours), on passe à la ligne suivante
+                if (jourSemaine === 7) {
+                    tbody.appendChild(tr);
+                    tr = document.createElement("tr");
+                    jourSemaine = 0;
+                }
+            }
+
+            // 6. On comble la fin de la dernière ligne avec des cases vides
+            if (jourSemaine > 0) {
+                for (let i = jourSemaine; i < 7; i++) {
+                    let td = document.createElement("td");
+                    td.className = "case-vide";
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+        }
+
+        // Actions quand on clique sur "Précédent"
+        document.getElementById("btn-prec").addEventListener("click", function() {
+            moisActuel--;
+            if (moisActuel < 0) {
+                moisActuel = 11;
+                anneeActuelle--;
+            }
+            genererCalendrier(moisActuel, anneeActuelle);
+        });
+
+        // Actions quand on clique sur "Suivant"
+        document.getElementById("btn-suiv").addEventListener("click", function() {
+            moisActuel++;
+            if (moisActuel > 11) {
+                moisActuel = 0;
+                anneeActuelle++;
+            }
+            genererCalendrier(moisActuel, anneeActuelle);
+        });
+
+        // On lance la création du calendrier au démarrage
+        genererCalendrier(moisActuel, anneeActuelle);
+    </script>
+</body>
+</html>
