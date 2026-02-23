@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Accueil - TP4</title>
+    <link rel="stylesheet" href="Style/style.css">
+    
+    <style>
+        .joli-retour {
+            display: inline-block; /* Permet de donner des dimensions comme une boîte */
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #e74c3c; /* Un joli rouge/orange */
+            color: white;
+            text-decoration: none; /* Enlève le soulignement du lien */
+            font-weight: bold;
+            border-radius: 8px; /* Arrondit les bords */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Petite ombre portée */
+            transition: all 0.3s ease; /* Rend l'animation fluide */
+            text-align: center;
+        }
+
+        /* Effet quand on passe la souris dessus */
+        .joli-retour:hover {
+            background-color: #c0392b; /* Rouge plus foncé */
+            transform: translateY(-2px); /* Effet de soulèvement */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Centrer le bouton en bas de page */
+        .centre-bouton {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cours du bloc1 - Programmation</h1>
+
+        <div class="images-flex">
+            <a href="Docs/cours_html/COURS/cours1.html"><img src="Image/HTML.png" alt="HTML" width="74" height="60"></a>
+            <a href="Docs/cours_css/COURS/cours1.html"><img src="Image/CSS.png" alt="CSS" width="74" height="60"></a>
+            <a href="Docs/cours_JS/index.html"><img src="Image/JS.png" alt="JS" width="74" height="60"></a>
+        </div>
+
+        <div class="box">
+            <h2>Descriptif du cours</h2>
+            <p>Bienvenue sur le portail de formation Web. Vous trouverez ici les ressources pour maîtriser le HTML, le CSS et le JavaScript.</p>
+        </div>
+
+        <div class="box" style="text-align: left;">
+            <ol>
+                <li><a href="Docs/cours_html/COURS/cours1.html">COURS ET TP HTML</a></li>
+                <li><a href="Docs/cours_css/COURS/cours1.html">COURS ET TP CSS</a></li>
+                <li><a href="Docs/cours_JS/index.html">COURS ET TP JS</a></li>
+            </ol>
+        </div>
+        
+        <div class="centre-bouton">
+            <a href="../index.html">Page Accueil</a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
