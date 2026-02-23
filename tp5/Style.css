@@ -42,3 +42,71 @@ th.head-zone-c   { background-color: #8cbd18; color: white; }
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0; /* Petite ligne grise fine de séparation */
 }
+/* =========================================
+   STYLE SPECIFIQUE POUR L'EXERCICE 2 
+   ========================================= */
+
+/* Style pour le 2ème tableau (pour le différencier du calendrier) */
+.table-langages {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centre le tableau */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table-langages th, .table-langages td {
+    border: 1px solid #bdc3c7; /* Bordure grise classique */
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    color: #333;
+}
+
+.table-langages th {
+    background-color: #34495e; /* En-tête bleu très foncé */
+    color: white;
+    font-weight: bold;
+}
+
+/* La légende du tableau (caption) */
+.table-langages caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Réduction des logos dans le tableau */
+.logo-reduit {
+    width: 60px; /* Taille réduite demandée par l'exercice */
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+/* Petit effet sympa au survol du logo */
+.logo-reduit:hover {
+    transform: scale(1.1);
+}
+
+/* Style de la balise code */
+code {
+    background-color: #f4f4f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #c0392b; /* Code en rouge sombre pour ressortir */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* Style des liens dans le tableau */
+.table-langages a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.table-langages a:hover {
+    text-decoration: underline;
+}

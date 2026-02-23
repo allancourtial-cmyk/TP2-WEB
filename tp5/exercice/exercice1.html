@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <title>Exercice 1 - Calendrier Scolaire</title>
     <link rel="stylesheet" href="../Style.css">
+
+        <style>
+        /* --- STYLE POUR EMBELLIR LA PAGE --- */
+        .titre-joli {
+            text-align: center;
+            color: #2c3e50;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #bdc3c7; /* Une petite ligne de séparation */
+            margin-bottom: 30px;
+        }
+
+        .menu-boutons {
+            display: flex;
+            flex-direction: column; /* Aligne les boutons de haut en bas */
+            align-items: center; /* Centre les boutons au milieu */
+            gap: 20px; /* Met 20px d'espace entre chaque bouton (plus besoin de <br>) */
+        }
+
+        .bouton-lien {
+            display: block;
+            width: 80%;
+            max-width: 300px; /* Empêche le bouton d'être trop large sur grand écran */
+            padding: 15px 20px;
+            background-color: #b92929; /* Joli bleu professionnel */
+            color: white; /* Texte en blanc */
+            text-align: center;
+            text-decoration: none; /* Enlève le soulignement du lien */
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px; /* Arrondit les bords du bouton */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ajoute une petite ombre portée */
+            transition: all 0.3s ease; /* Rend l'animation de survol très fluide */
+        }
+
+        /* Effet quand on passe la souris sur le bouton */
+        .bouton-lien:hover {
+            background-color: #db3434; /* Un bleu légèrement plus clair */
+            transform: translateY(-3px); /* Le bouton "se soulève" légèrement */
+            color: white; 
+            text-decoration: none;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* L'ombre s'agrandit */
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -71,6 +115,9 @@
             </tr>
         </tbody>
     </table>
+    <div class="menu-boutons">
+            <a href="../index.html" class="bouton-lien">retour tableau </a>
+    </div>
 
 </body>
 </html>
