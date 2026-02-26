@@ -56,3 +56,38 @@ h1 {
 .card:active img {
     opacity: 100; 
 }
+/* =========================================
+   STYLE DU BOUTON RETOUR
+   ========================================= */
+
+.menu-boutons {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    align-items: center;
+    margin-top: 30px; /* Ajoute un peu d'espace avec le jeu au-dessus */
+    margin-bottom: 50px; /* Laisse de l'espace en bas de la page */
+}
+
+.bouton-lien {
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.retour-portfolio {
+    background-color: #e74c3c;
+}
+
+.retour-portfolio:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: white; /* Garde le texte blanc au survol */
+}
