@@ -1,0 +1,109 @@
+/* =========================================
+   BASE ET CALCUL DES BOITES
+   ========================================= */
+* {
+    /* Applique le calcul de largeur incluant padding et border (Vu dans le cours)  */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px; /* Petite marge autour du site */
+}
+
+/* =========================================
+   LE ZONING (Les Boîtes)
+   ========================================= */
+
+header {
+    background-color: #ffb3b3; /* Rouge clair */
+    height: 80px;
+    border: 1px solid black;
+    /* Pour centrer le texte verticalement avec la hauteur de la boîte */
+    line-height: 80px; 
+}
+
+nav {
+    background-color: #b3d9ff; /* Bleu clair */
+    height: 40px;
+    border: 1px solid black;
+    line-height: 40px;
+}
+
+/* =========================================
+   LES 3 COLONNES AVEC FLOAT
+   ========================================= */
+
+/* On met les 3 colonnes en "flottant" pour qu'elles s'alignent  */
+.zone-gauche, .zone-milieu, .zone-droite {
+    float: left; 
+    height: 500px;
+    border: 1px solid black;
+    /*centrer le texte grossièrement */
+    padding-top: 250px; 
+}
+
+.zone-gauche {
+    background-color: #ffffb3; /* Jaune clair */
+    width: 20%; /* Prend 20% de la page */
+}
+
+.zone-milieu {
+    background-color: #e6ccff; /* Violet clair */
+    width: 60%; /* Prend 60% de la page */
+}
+
+.zone-droite {
+    background-color: #ffffb3; /* Jaune clair */
+    width: 20%; /* Prend 20% de la page */
+}
+
+/* =========================================
+   LE PIED DE PAGE
+   ========================================= */
+footer {
+    background-color: #e6e6e6; /* Gris */
+    height: 60px;
+    border: 1px solid black;
+    line-height: 60px;
+    
+    /* TRÈS IMPORTANT : Annule l'effet flottant des colonnes du dessus  */
+    clear: both; 
+}
+
+/* =========================================
+   STYLE DU BOUTON RETOUR
+   ========================================= */
+.menu-boutons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.bouton-lien {
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.retour-portfolio { background-color: #e74c3c; }
+.retour-portfolio:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    color: white;
+}
