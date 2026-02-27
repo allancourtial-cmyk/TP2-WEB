@@ -72,7 +72,7 @@ footer {
     line-height: 60px;
     
     /* TRÈS IMPORTANT : Annule l'effet flottant des colonnes du dessus  */
-    clear: both; 
+    clear: both;
 }
 
 /* =========================================

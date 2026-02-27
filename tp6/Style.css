@@ -64,7 +64,8 @@ h1 {
     display: flex;
     justify-content: center; /* Centre le bouton horizontalement */
     align-items: center;
-    margin-top: 30px; /* Ajoute un peu d'espace avec le jeu au-dessus */
+    width: 100%;
+    margin-top: 40px; /* Ajoute un peu d'espace avec le jeu au-dessus */
     margin-bottom: 50px; /* Laisse de l'espace en bas de la page */
 }
 
