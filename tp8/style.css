@@ -1,0 +1,422 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    /* Couleur de fond de toute la page */
+}
+
+/* --- LE HEADER --- */
+.en-tete {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50;
+    /* Bleu nuit */
+    border-radius: 8px;
+    /* Bords un peu arrondis */
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.logo-box {
+    width: 108px;
+    height: 105px;
+    background-color: #e74c3c;
+    /* Rouge pour le logo */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Texte en blanc */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.menu-principal {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: white;
+    /* Les liens en blanc */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Effet de couleur quand on passe la souris */
+.menu-principal a:hover {
+    background-color: #34495e;
+    /* Un peu plus clair au survol */
+}
+
+/* --- LE CONTENU CENTRAL --- */
+.conteneur-principal {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sous-menu {
+    width: 150px;
+    background-color: #3498db;
+    /* Bleu clair */
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sous-menu p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 20px 0;
+}
+
+.corps-page {
+    flex: 1;
+    background-color: white;
+    /* Fond blanc pour bien lire le contenu */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Petite ombre légère */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* --- LE FOOTER --- */
+.pied-page {
+    background-color: #2c3e50;
+    /* Bleu nuit comme en haut */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* --- MODE TELEPHONE --- */
+@media (max-width: 768px) {
+    .en-tete {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .conteneur-principal {
+        flex-direction: column;
+    }
+
+    .sous-menu {
+        width: auto;
+        padding: 10px;
+    }
+
+    .sous-menu p {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+}
+
+/* --- STYLE DU TP3 (CV & Tableaux) --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.visuel {
+    background-color: #fffbe6;
+}
+
+.table-sql {
+    font-family: monospace;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-top: 5px;
+    border-left: 4px solid #333;
+}
+
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 2px solid #ccc;
+}
+
+.cv-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cv-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.cv-header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.cv-section h3 {
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.cv-item {
+    margin-bottom: 15px;
+}
+
+.cv-date {
+    font-weight: bold;
+    color: #e67e22;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.cv-job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.cv-details {
+    font-style: italic;
+    color: #555;
+}
+
+/* --- STYLE DES COURS JS --- */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.retour-sommaire {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.box ul ul {
+    padding-left: 20px;
+}
+
+/* --- STYLE DES TABLEAUX JS --- */
+.box table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.box th,
+.box td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+/* --- STYLE DU MENU JS (TP4) --- */
+.titre-joli {
+    text-align: center;
+    color: #2c3e50;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #bdc3c7;
+    margin-bottom: 30px;
+}
+
+.menu-boutons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.bouton-lien {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    padding: 15px 20px;
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bouton-lien:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* --- LE CONTENEUR PRINCIPAL DU TP --- */
+.corps-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+}
+
+/* --- ALIGNEMENT DES 3 IMAGES --- */
+.images-flex {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.images-flex img {
+    width: 74px;
+    height: 60px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+/* --- LISTE DU SOMMAIRE --- */
+.corps-page ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.corps-page ol li {
+    margin-bottom: 10px;
+}
+
+/* --- LIENS --- */
+.corps-page a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.corps-page a:hover {
+    text-decoration: underline;
+}
+
+/* --- TYPOGRAPHIE (Titres, Textes et Code) --- */
+.corps-page h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.corps-page h2 {
+    color: #34495e;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 5px;
+}
+
+.corps-page h3 {
+    color: #2980b9;
+    margin-left: 15px;
+}
+
+.corps-page p {
+    line-height: 1.6;
+    color: #333;
+    margin-left: 15px;
+}
+
+.corps-page code {
+    display: block;
+    background-color: #2b2b2b;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 15px;
+}
+/* --- BOUTON RETOUR (TP4 Accueil) --- */
+.corps-page .joli-retour {
+    display: inline-block; 
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #e74c3c; 
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease; 
+    text-align: center;
+}
+
+.corps-page .joli-retour:hover {
+    background-color: #c0392b; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    color: white; 
+}
+
+.corps-page .centre-bouton {
+    text-align: center;
+}
