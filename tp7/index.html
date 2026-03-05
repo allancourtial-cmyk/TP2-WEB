@@ -2,39 +2,129 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>TP7 - Zoning HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mes TPs Web</title>
     <link rel="stylesheet" href="Style.css">
+    
+    <style>
+        /* --- Style global de la page --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Un fond gris très clair et doux */
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centre le contenu horizontalement */
+        }
+
+        /* --- En-tête (Bandeau de couleur) --- */
+        header {
+            background-color: #2980b9; /* Beau bleu professionnel */
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9; /* Rend le texte légèrement transparent */
+            margin-top: 10px;
+        }
+
+        /* --- Conteneur des projets --- */
+        .projets-container {
+            display: flex;
+            gap: 30px; /* Espace entre les cartes */
+            justify-content: center;
+            flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* --- Style des Cartes (Les anciens liens) --- */
+        .carte-tp {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            text-decoration: none; /* Enlève le soulignement moche des liens */
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Ombre légère */
+            border-top: 5px solid #3498db; /* Petite ligne bleue en haut */
+            transition: all 0.3s ease; /* Rend l'animation fluide */
+        }
+
+        /* --- Effet quand on passe la souris --- */
+        .carte-tp:hover {
+            transform: translateY(-10px); /* La carte se soulève */
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15); /* L'ombre grandit */
+            border-top-color: #e74c3c; /* La ligne bleue devient rouge */
+        }
+
+        .carte-tp h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .carte-tp p {
+            color: #7f8c8d; /* Texte descriptif en gris */
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
-    <h1>TP CSS - ZONING D’UNE PAGE WEB </h1>
+
     <header>
-        Zone Haut
+        <h1>Mon Portfolio Web</h1>
+        <p>Découvrez l'ensemble de mes travaux pratiques</p>
     </header>
 
-    <nav>
-        Zone de Menu
-    </nav>
-
-    <div class="conteneur-colonnes">
+    <div class="projets-container">
         
-        <aside class="zone-gauche">
-            Zone de Gauche
-        </aside>
+        <a href="page1/index.html" class="carte-tp">
+            <h2>Page  1</h2>
+            <p>Création de pages HTML et mise en forme CSS de base.</p>
+        </a>
 
-        <section class="zone-milieu">
-            Zone du Milieu
-        </section>
+        <a href="page2/index.html" class="carte-tp">
+            <h2>Page 2</h2>
+            <p>Les liens en HTML, l'organisation de l'arborescence et intégration JS.</p>
+        </a>
 
-        <aside class="zone-droite">
-            Zone de Droite
-        </aside>
-
+        <a href="page3/index.html" class="carte-tp">
+            <h2>Page 3</h2>
+            <p>Création et mise en forme de tableaux complexes en HTML et CSS.</p>
+        </a>
+        <a href="page4/index.html" class="carte-tp">
+            <h2>Page 4</h2>
+            <p>Création et mise en forme de tableaux complexes en HTML et CSS.</p>
+        </a>
+        <a href="page5/index.html" class="carte-tp">
+            <h2>Page 5</h2>
+            <p>Création et mise en forme de tableaux complexes en HTML et CSS.</p>
+        </a>
+        <a href="page6/index.html" class="carte-tp">
+            <h2>Page 6</h2>
+            <p>Création et mise en forme de tableaux complexes en HTML et CSS.</p>
+        </a>
+        <a href="page7/index.html" class="carte-tp">
+            <h2>Page 7</h2>
+            <p>Création et mise en forme de tableaux complexes en HTML et CSS.</p>
+        </a>
     </div>
-
-    <footer>
-        Zone de Bas
-    </footer>
-
     <div class="menu-boutons">
         <a href="../index.html" class="bouton-lien retour-portfolio">⬅️ Retour au Portfolio</a>
     </div>
